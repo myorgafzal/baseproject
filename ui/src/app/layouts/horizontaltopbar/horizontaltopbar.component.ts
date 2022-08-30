@@ -186,24 +186,20 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
     const links: any = document.getElementsByClassName('side-nav-link-ref');
     let matchingMenuItem = null;
     // tslint:disable-next-line: prefer-for-of
-    for (let i = 0; i < links.length; i++) {
+    for (let value of links) {
       // reset menu
-      resetParent(links[i]);
+      resetParent(value);
     }
     // tslint:disable-next-line: prefer-for-of
-    for (let i = 0; i < links.length; i++) {
+    for (let value of links) {
       // tslint:disable-next-line: no-string-literal
-      if (location.pathname === links[i]['pathname']) {
-        matchingMenuItem = links[i];
+      if (location.pathname === value['pathname']) {
+        matchingMenuItem = value;
         break;
       }
     }
     if (matchingMenuItem) {
       const parent = matchingMenuItem.parentElement;
-      /**
-       * TODO: This is hard coded way of expading/activating parent menu dropdown and working till level 3.
-       * We should come up with non hard coded approach
-       */
       if (parent) {
         parent.classList.add('active');
         const parent2 = parent.parentElement;

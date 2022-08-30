@@ -8,7 +8,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
     constructor() {
         //describe code here ..
-     }
+    }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
@@ -111,7 +111,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                             break;
                         }
                     }
-
                     // respond 200 OK
                     return of(new HttpResponse({ status: 200 }));
                 } else {
