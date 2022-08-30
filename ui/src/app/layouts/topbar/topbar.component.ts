@@ -13,8 +13,8 @@ import { LAYOUT_MODE } from "../layouts.model";
 
 @Component({
   selector: 'app-topbar',
-  templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.scss']
+  templateUrl: './topbar.component.html'
+  
 })
 
 /**
