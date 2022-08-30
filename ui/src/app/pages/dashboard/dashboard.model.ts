@@ -17,5 +17,3 @@ export interface ChartType {
     title?: any;
     responsive?: any;
 }
-
-

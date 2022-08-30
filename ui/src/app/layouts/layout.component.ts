@@ -81,7 +81,9 @@ export class LayoutComponent implements OnInit {
 
   }
 
-  ngAfterViewInit() { }
+  ngAfterViewInit() {
+    //Describe your code here
+  }
 
   /**
    * Check if the vertical layout is requested

@@ -7,8 +7,7 @@ import { ChartType } from './dashboard.model';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  templateUrl: './dashboard.component.html'
 })
 
 /**
@@ -48,7 +47,9 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor() {
+    //Describe your code here
+  }
 
   /**
    * Sale Location Map

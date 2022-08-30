@@ -1,55 +1,44 @@
 
 import { Component, OnInit, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-
 import { MENU } from './menu';
 import { MenuItem } from './menu.model';
-
 import { TranslateService } from '@ngx-translate/core';
 import { CookieService } from 'ngx-cookie-service';
-
 import { LanguageService } from '../../core/services/language.service';
 import { EventService } from '../../core/services/event.service';
 import { environment } from '../../../environments/environment';
 import { AuthenticationService } from '../../core/services/auth.service';
 import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
 import { LAYOUT_MODE } from "../layouts.model";
-
 @Component({
   selector: 'app-horizontaltopbar',
-  templateUrl: './horizontaltopbar.component.html',
-  styleUrls: ['./horizontaltopbar.component.scss'],
+  templateUrl: './horizontaltopbar.component.html'
 })
-
 /**
  * Horizontal-Topbar Component
  */
 export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
-  
   mode: string | undefined;
   layoutMode!: string;
-
   menuItems: MenuItem[] = [];
   element: any;
   flagvalue: any;
   cookieValue: any;
   countryName: any;
   valueset: any;
-
   /**
    * Language Listing
    */
-   listLang = [
+  listLang = [
     { text: 'English', flag: 'assets/images/flags/us.jpg', lang: 'en' },
     { text: 'Spanish', flag: 'assets/images/flags/spain.jpg', lang: 'es' },
     { text: 'German', flag: 'assets/images/flags/germany.jpg', lang: 'de' },
     { text: 'Italian', flag: 'assets/images/flags/italy.jpg', lang: 'it' },
     { text: 'Russian', flag: 'assets/images/flags/russia.jpg', lang: 'ru' },
   ];
-
   @Output() settingsButtonClicked = new EventEmitter();
   @Output() mobileMenuButtonClicked = new EventEmitter();
-
   constructor(
     private router: Router,
     public translate: TranslateService,
@@ -65,11 +54,10 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
       }
     });
   }
-
   /***
    * Language Value Set
    */
-   setLanguage(text: string, lang: string, flag: string) {
+  setLanguage(text: string, lang: string, flag: string) {
     this.countryName = text;
     this.flagvalue = flag;
     this.cookieValue = lang;
@@ -92,14 +80,12 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
       this.flagvalue = val.map(element => element.flag);
     }
   }
-
   /**
    * Initialize
    */
   initialize(): void {
     this.menuItems = MENU;
   }
-
   /**
    * Returns true or false if given menu item has child or not
    * @param item menuItem
@@ -107,14 +93,12 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
   hasItems(item: MenuItem) {
     return item.subItems !== undefined ? item.subItems.length > 0 : false;
   }
-
   /**
    * on settings button clicked from topbar
    */
   onSettingsButtonClicked() {
     document.body.classList.toggle('right-bar-enabled');
   }
-
   /**
    * On menu click
    */
@@ -129,11 +113,9 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
     }
     return false;
   }
-
   ngAfterViewInit() {
     this.activateMenu();
   }
-
   /**
    * remove active and mm-active class
    */
@@ -146,27 +128,24 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
   /**
    * Topbar Light-Dark Mode Change
    */
-   changeMode(mode: string) {
+  changeMode(mode: string) {
     this.mode = mode;
     this.layoutMode = mode;
     this.eventService.broadcast('changeMode', mode);
   }
-
- /**
-   * Toggle the menu bar when having mobile screen
-   */
+  /**
+    * Toggle the menu bar when having mobile screen
+    */
   toggleMobileMenu(event: any) {
     event.preventDefault();
     this.mobileMenuButtonClicked.emit();
   }
-
   /**
    * Toggles the right sidebar
    */
   toggleRightSidebar() {
     this.settingsButtonClicked.emit();
   }
-
   /**
    * Activates the menu
    */
@@ -203,7 +182,6 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
         }
       }
     };
-
     // activate menu item based on location
     const links: any = document.getElementsByClassName('side-nav-link-ref');
     let matchingMenuItem = null;
@@ -220,7 +198,6 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
         break;
       }
     }
-
     if (matchingMenuItem) {
       const parent = matchingMenuItem.parentElement;
       /**
@@ -248,11 +225,10 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
       }
     }
   }
-
   /**
    * Logout the user
    */
-   logout() {
+  logout() {
     if (environment.defaultauth === 'firebase') {
       this.authService.logout();
     } else {
@@ -260,6 +236,4 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
     }
     this.router.navigate(['/account/login']);
   }
-
-
 }

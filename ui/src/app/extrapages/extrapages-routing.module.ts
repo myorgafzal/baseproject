@@ -16,4 +16,6 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class ExtrapagesRoutingModule { }
+export class ExtrapagesRoutingModule {
+    //Describe your login code here
+}

@@ -6,7 +6,9 @@ import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
 
-    constructor() { }
+    constructor() {
+        //describe code here ..
+     }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 

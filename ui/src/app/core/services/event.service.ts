@@ -1,22 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
-
 interface Event {
     type: string;
     payload?: any;
 }
-
 type EventCallback = (payload: any) => void;
-
 @Injectable({
     providedIn: 'root'
 })
 export class EventService {
-
     private handler = new Subject<Event>();
-    constructor() { }
-
+    constructor() {
+        //Describe your code here
+    }
     /**
      * Broadcast the event
      * @param type type of event
@@ -25,7 +22,6 @@ export class EventService {
     broadcast(type: string, payload = {}) {
         this.handler.next({ type, payload });
     }
-
     /**
      * Subscribe to event
      * @param type type of event

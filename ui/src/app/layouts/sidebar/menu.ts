@@ -1,5 +1,4 @@
 import { MenuItem } from './menu.model';
-
 export const MENU: MenuItem[] = [
     {
         id: 1,
@@ -12,7 +11,6 @@ export const MENU: MenuItem[] = [
         icon: 'home',
         link: '/',
     },
-   
     // {
     //     id: 156,
     //     label: 'MENUITEMS.AUTHENTICATION.TEXT',
@@ -69,6 +67,5 @@ export const MENU: MenuItem[] = [
     //         }
     //     ]
     // },
-    
-];
 
+];

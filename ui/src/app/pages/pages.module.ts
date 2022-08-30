@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
 import { CountToModule } from 'angular-count-to';
 import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
@@ -15,9 +14,6 @@ import { SharedModule } from '../shared/shared.module';
 import { WidgetModule } from '../shared/widget/widget.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
-
-
 @NgModule({
   declarations: [
     DashboardComponent

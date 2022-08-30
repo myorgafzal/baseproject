@@ -21,4 +21,6 @@ import { LoginComponent } from './login/login.component';
     NgbCarouselModule
   ]
 })
-export class AuthModule { }
+export class AuthModule { 
+  //Describe your code here
+}

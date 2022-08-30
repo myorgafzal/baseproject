@@ -1,9 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 @Component({
   selector: 'app-pagetitle',
-  templateUrl: './pagetitle.component.html',
-  styleUrls: ['./pagetitle.component.scss']
+  templateUrl: './pagetitle.component.html'
 })
 
 /**
@@ -19,8 +17,11 @@ export class PagetitleComponent implements OnInit {
 
   @Input() title: string | undefined;
 
-  constructor() { }
+  constructor() {
+    //Describe your code here
+  }
 
   ngOnInit(): void {
+    //Describe your code here
   }
 }

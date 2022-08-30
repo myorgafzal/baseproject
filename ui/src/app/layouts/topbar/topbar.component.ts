@@ -1,6 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { CookieService } from 'ngx-cookie-service';
 import { EventService } from '../../core/services/event.service';
 import { LanguageService } from '../../core/services/language.service';
@@ -8,18 +7,13 @@ import { TranslateService } from '@ngx-translate/core';
 import { environment } from '../../../environments/environment';
 import { AuthenticationService } from '../../core/services/auth.service';
 import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
-
 import { LAYOUT_MODE } from "../layouts.model";
 
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html'
-  
 })
 
-/**
- * Topbar Component
- */
 export class TopbarComponent implements OnInit {
 
   mode: string | undefined;
@@ -112,5 +106,4 @@ export class TopbarComponent implements OnInit {
     }
     this.router.navigate(['/account/login']);
   }
-
 }

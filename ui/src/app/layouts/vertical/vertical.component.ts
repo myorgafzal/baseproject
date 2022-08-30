@@ -11,7 +11,9 @@ export class VerticalComponent implements OnInit {
 
   isCondensed = false;
 
-  constructor() { }
+  constructor() {
+    //Describe your code here
+  }
 
   ngOnInit(): void {
     document.body.setAttribute('data-layout', 'vertical');
@@ -41,5 +43,4 @@ export class VerticalComponent implements OnInit {
   onSettingsButtonClicked() {
     document.body.classList.toggle('right-bar-enabled');
   }
-
 }

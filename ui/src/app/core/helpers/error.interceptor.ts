@@ -7,7 +7,9 @@ import { AuthenticationService } from '../services/auth.service';
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 
-    constructor(private authenticationService: AuthenticationService) { }
+    constructor(private authenticationService: AuthenticationService) { 
+        //Describe your code here
+    }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(request).pipe(catchError(err => {

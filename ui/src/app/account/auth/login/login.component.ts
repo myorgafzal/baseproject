@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html'  
+  templateUrl: './login.component.html'
 })
 
 /**
@@ -73,5 +71,4 @@ export class LoginComponent implements OnInit {
    toggleFieldTextType() {
     this.fieldTextType = !this.fieldTextType;
   }
-
 }

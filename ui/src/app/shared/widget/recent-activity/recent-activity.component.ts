@@ -1,14 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 @Component({
   selector: 'app-recent-activity',
-  templateUrl: './recent-activity.component.html',
-  styleUrls: ['./recent-activity.component.scss']
+  templateUrl: './recent-activity.component.html'
 })
 
-/**
- * Recent Activity Component
- */
 export class RecentActivityComponent implements OnInit {
 
   @Input() recentActivity: Array<{
@@ -19,9 +14,11 @@ export class RecentActivityComponent implements OnInit {
     price?: string;
   }> | undefined;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    //Describe your code here
   }
 
+  ngOnInit(): void {
+    //Describe your code here
+  }
 }

@@ -1,32 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-horizontal',
-  templateUrl: './horizontal.component.html',
-  styleUrls: ['./horizontal.component.scss']
+  templateUrl: './horizontal.component.html'
 })
-
 /**
  * Horizontal Component
  */
 export class HorizontalComponent implements OnInit {
-
   isCondensed = false;
-  
-  constructor() { }
-
+  constructor() {
+    //Describe your code here
+  }
   ngOnInit(): void {
     document.body.setAttribute('data-layout', 'horizontal');
     document.body.removeAttribute('data-sidebar');
   }
-
   /**
    * on settings button clicked from topbar
    */
-   onSettingsButtonClicked() {
+  onSettingsButtonClicked() {
     document.body.classList.toggle('right-bar-enabled');
   }
-
   /**
    * Mobile Toggle Menu
    */
@@ -34,5 +28,4 @@ export class HorizontalComponent implements OnInit {
     const element = document.getElementById('topnav-menu-content');
     element?.classList.toggle('show');
   }
-
 }

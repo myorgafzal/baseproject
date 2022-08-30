@@ -18,4 +18,6 @@ import { LoginComponent } from './login/login.component';
     AuthModule
   ]
 })
-export class AccountModule { }
+export class AccountModule {
+  //Describe your code here
+}
