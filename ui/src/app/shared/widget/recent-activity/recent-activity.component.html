@@ -1,9 +1,8 @@
 <ul class="list-unstyled activity-wid mb-0">
     <li class="activity-list activity-border" *ngFor="let data of recentActivity">
         <div class="activity-icon avatar-md">
-            <span class="avatar-title bg-soft-primary text-primary rounded-circle"
-                [ngClass]=" { 'bg-soft-warning text-warning': data.coine === '+0.5 BTC' }">
-                <i class="{{data.icon}}"></i>
+            <span class="avatar-title bg-soft-primary text-primary rounded-circle" [ngClass]=" { 'bg-soft-warning text-warning': data.coine === '+0.5 BTC' }">
+                <em class="{{data.icon}}"></em>
             </span>
         </div>
         <div class="timeline-list-item">
@@ -19,9 +18,8 @@
 
                 <div class="flex-shrink-0 text-end">
                     <div class="dropdown" ngbDropdown>
-                        <a class="text-muted dropdown-toggle font-size-24" role="button" data-bs-toggle="dropdown"
-                            aria-haspopup="true" ngbDropdownToggle>
-                            <i class="mdi mdi-dots-vertical"></i>
+                        <a class="text-muted dropdown-toggle font-size-24" role="button" data-bs-toggle="dropdown" aria-haspopup="true" ngbDropdownToggle>
+                            <em class="mdi mdi-dots-vertical"></em>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
