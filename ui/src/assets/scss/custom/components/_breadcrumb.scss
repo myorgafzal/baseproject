@@ -8,7 +8,7 @@
     }
     +.breadcrumb-item {
         &::before {
-            font-family: inherit;
+            font-family: inherit, sans-serif;
         }
     }
 }

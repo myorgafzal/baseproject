@@ -167,7 +167,7 @@
             top: 0;
             &:before {
                 content: "\F012C";
-                font-family: inherit;
+                font-family: inherit, sans-serif;
                 top: 0;
                 height: 20px;
                 color: darken($dark, 5%);
