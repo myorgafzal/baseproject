@@ -10,7 +10,6 @@ import { NgbModule, NgbTooltipModule, NgbPopoverModule, NgbNavModule } from '@ng
 import { PagesModule } from './pages/pages.module';
 import { LayoutsModule } from './layouts/layouts.module';
 import { ExtrapagesModule } from './extrapages/extrapages.module';
-import { FakeBackendInterceptor } from './core/helpers/fake-backend';
 import { ErrorInterceptor } from './core/helpers/error.interceptor';
 import { JwtInterceptor } from './core/helpers/jwt.interceptor';
 export function createTranslateLoader(http: HttpClient): any {
@@ -45,7 +44,6 @@ export function createTranslateLoader(http: HttpClient): any {
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })
