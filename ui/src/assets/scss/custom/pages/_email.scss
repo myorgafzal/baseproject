@@ -167,7 +167,7 @@
             top: 0;
             &:before {
                 content: "\F012C";
-                font-family: "Material Design Icons";
+                font-family: inherit;
                 top: 0;
                 height: 20px;
                 color: darken($dark, 5%);

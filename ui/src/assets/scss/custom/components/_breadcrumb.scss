@@ -8,7 +8,7 @@
     }
     +.breadcrumb-item {
         &::before {
-            font-family: "Material Design Icons";
+            font-family: inherit;
         }
     }
 }

@@ -48,7 +48,7 @@
             &:after {
                 position: absolute;
                 content: "\F012C";
-                font-family: "Material Design Icons";
+                font-family: inherit;
                 top: -4px !important;
                 left: 1px;
                 /*rtl: -4px */
