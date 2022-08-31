@@ -93,7 +93,7 @@
         input[type="checkbox"]:checked+label {
             &::after {
                 content: "\f00c";
-                font-family: "Font Awesome 5 Free";
+                font-family: "Font Awesome 5 Free", sans-serif;
                 font-weight: 900;
             }
         }
