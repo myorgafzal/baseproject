@@ -51,6 +51,17 @@
     }
     .timeline-icon {
         margin: 42px 10px 0 10px;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            top: 45px;
+            background: $primary;
+            border-radius: 15px;
+            z-index: 1;
+        }
     }
     .timeline-left {
         text-align: right;
@@ -64,19 +75,8 @@
         }
         text-align: left;
     }
-    .timeline-icon {
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            top: 45px;
-            background: $primary;
-            border-radius: 15px;
-            z-index: 1;
-        }
-    }
+    // .timeline-icon {
+    // }
     @media (min-width: 768px) {
         .event-content {
             padding-right: 24px;
