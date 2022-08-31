@@ -149,7 +149,7 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
   /**
    * Activates the menu
    */
-  private activateMenu() {
+  protected activateMenu(): void {
     const resetParent = (el: any) => {
       const parent = el.parentElement;
       if (parent) {
@@ -168,14 +168,10 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
               const parent5 = parent4.parentElement;
               if (parent5) {
                 parent5.classList.remove('active');
-                const menuelement = document.getElementById(
-                  'topnav-menu-content'
-                );
+                const menuelement = document.getElementById('topnav-menu-content');
                 if (menuelement !== null)
                   if (menuelement.classList.contains('show'))
-                    document
-                      .getElementById('topnav-menu-content')!
-                      .classList.remove('show');
+                    document.getElementById('topnav-menu-content')!.classList.remove('show');
               }
             }
           }

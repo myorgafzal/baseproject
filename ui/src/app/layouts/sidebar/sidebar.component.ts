@@ -67,17 +67,17 @@ export class SidebarComponent implements OnInit {
   /**
    * Activate the parent dropdown
    */
-  _activateMenuDropdown() {
+  _activateMenuDropdown(): void {
     this._removeAllClass('mm-active');
     this._removeAllClass('mm-show');
     const links: any = document.getElementsByClassName('side-nav-link-ref');
     let menuItemEl = null;
     // tslint:disable-next-line: prefer-for-of
     const paths = [];
-    for (let i = 0; i < links.length; i++) {
-      paths.push(links[i]['pathname']);
+    for (let value of links) {
+      paths.push(value['pathname']);
     }
-    var itemIndex = paths.indexOf(window.location.pathname);
+    let itemIndex = paths.indexOf(window.location.pathname);
     if (itemIndex === -1) {
       const strIndex = window.location.pathname.lastIndexOf('/');
       const item = window.location.pathname.substr(0, strIndex).toString();
