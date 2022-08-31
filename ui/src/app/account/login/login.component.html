@@ -36,7 +36,7 @@
                                         <div class="input-group auth-pass-inputgroup">
                                             <input [type]="fieldTextType ? 'text' : 'password'" class="form-control" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon">
                                             <button class="btn btn-light " type="button" id="password-addon"><em
-                                                    class="mdi" [ngClass]="{'mdi-eye-off-outline': !fieldTextType, 'mdi-eye-outline': fieldTextType
+                                                    class="fa" [ngClass]="{'fas fa-eye-slash': !fieldTextType, 'fas fa-eye': fieldTextType
                                                       }" (click)="toggleFieldTextType()"></em></button>
                                             <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                                                 <span *ngIf="f.password.errors.required">Password is required</span>
@@ -65,17 +65,17 @@
                                     <ul class="list-inline mb-0">
                                         <li class="list-inline-item">
                                             <a href="javascript:void()" class="social-list-item bg-primary text-white border-primary">
-                                                <em class="mdi mdi-facebook"></em>
+                                                <em class="fab fa-facebook"></em>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
                                             <a href="javascript:void()" class="social-list-item bg-info text-white border-info">
-                                                <em class="mdi mdi-twitter"></em>
+                                                <em class="fab fa-twitter"></em>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
                                             <a href="javascript:void()" class="social-list-item bg-danger text-white border-danger">
-                                                <em class="mdi mdi-google"></em>
+                                                <em class="fab fa-google"></em>
                                             </a>
                                         </li>
                                     </ul>
@@ -86,7 +86,7 @@
                                 </div>
                             </div>
                             <div class="mt-4 mt-md-5 text-center">
-                                <p class="mb-0">© {{year}} Aximus . Crafted with <em class="mdi mdi-heart text-danger"></em> by Themesbrand
+                                <p class="mb-0">© {{year}} Aximus . Crafted with <em class="fas fa-heartbeat text-danger"></em> by Themesbrand
                                 </p>
                             </div>
                         </div>
